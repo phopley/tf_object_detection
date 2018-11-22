@@ -14,10 +14,12 @@ cvimg = cv2.imread("test_image.jpg")
 
 # Detect the objects
 object_names = odc.scan_for_objects(cvimg)
-
 print(object_names)
 
 cv2.imshow('object detection', cvimg)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+cv2.imwrite('adjusted_test_image.jpg', cvimg)
+
 
