@@ -104,7 +104,7 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tf_object_detection
-#  CATKIN_DEPENDS rospy
+  CATKIN_DEPENDS rospy message_runtime std_msgs
 #  DEPENDS system_lib
 )
 

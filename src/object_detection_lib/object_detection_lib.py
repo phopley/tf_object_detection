@@ -18,6 +18,7 @@ class ObjectDetection:
 
         # Load a frozen Tensorflow model into memory
         self.__detection_graph = tf.Graph()
+
         with self.__detection_graph.as_default():
             od_graph_def = tf.GraphDef()
             with tf.gfile.GFile(PATH_TO_FROZEN_GRAPH, 'rb') as fid:
