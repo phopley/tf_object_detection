@@ -105,7 +105,7 @@ class ObjectDetection:
         total_detections = output_dict['num_detections']
         if total_detections > 0:
             for detection in range(0, total_detections):
-                if output_dict['detection_scores'][detection] > self.__confidence
+                if output_dict['detection_scores'][detection] > self.__confidence:
                     category = output_dict['detection_classes'][detection]
                     detected_list.insert(0,self.__category_index[category]['name'])
 
