@@ -1,0 +1,7 @@
+# This action scans the next camera image for recognised objects
+# There are no parameters to start the action
+---
+# Results of the scan
+string[] names_detected
+---
+# No parameters for feedback
