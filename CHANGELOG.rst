@@ -2,7 +2,7 @@
 Changelog for package tf_object_detection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Unreleased
+1.0.0 (2019-01-14)
 ------------------
 * Updated to use compressed images
 * Updated to use action to start the object detection
