@@ -1,21 +1,23 @@
 # tf_object_detection
-ROS node for object detection
+ROS node for object detection using TensorFlow
 ## Running the Node
 Once you have the node built you can run it with "rosrun tf_object_detection tf_object_detection_node.py".
 ## Node Information
 Topics:
 
-* `camera/image/raw`:  
-  Subscribes `sensor_msgs/Image` Image which may be used to run object detection on
+* `raspicam_node/image/compressed`:  
+  Subscribes `sensor_msgs/CompressedImage` Image which may be used to run object detection on
 
-* `tf_object_detection_node/start`:  
-  Subscribes `std_msgs/Empty` Message to command object detection is carried out on the next image
-
-* `tf_object_detection_node/adjusted_image`:  
-  Publishes `sensor_msgs/Image` Adjusted image which may contain bounded boxes and labels of detected objects
+* `tf_object_detection_node/image/compressed`:  
+  Publishes `sensor_msgs/CompressedImage` Adjusted image which may contain bounded boxes and labels of detected objects
   
 * `tf_object_detection_node/result`:  
-  Publishes `tf_object_detection/detection_results` Contains an array of strings of the detected object names
+  Publishes `tf_object_detection/detection_results` Contains an array of strings of the detected object names  
+  
+Action:
+
+* `tf_object_detection/scan_for_objects`:  
+  Server used to control the process of scanning for objects in the current image.  
   
 Parameters:
 
